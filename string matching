@@ -1,0 +1,10 @@
+def doMatch(A, B):
+     for i in range(len(A)):
+        if A[i] != '*' and B[i] != '*':
+            if A[i] != B[i]:
+                return False
+     return True
+if __name__=='__main__':
+    A = "watch"
+    B = "what"
+    print(int(doMatch(A, B)))
