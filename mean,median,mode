@@ -1,0 +1,26 @@
+def get_median(arg_list):
+    arg_list.sort()
+    size = len(arg_list)
+    if size %2 == 1:
+        return arg_list[size//2]
+    else:
+        return (arg_list[size//2] + arg_list[size//2 -1])/2
+def get_mean(arg_list):
+    sum_list = 0
+    for i in arg_list:
+        sum_list +=i
+    return round(sum_list/len(arg_list), 2)
+def get_mode(arg_list):
+    mode_list = sorted(set(user_list), key=user_list.count,reverse=True)
+    mode_max = user_list.count(mode_list[0])
+    mode_res = []
+    for i in mode_list:
+        if user_list.count(i) < mode_max:
+            break
+        mode_res.append(i)
+    return sorted(mode_res)
+user_str = input('Enter a string of integers separated by a space: ')
+user_list = [int(i) for i in user_str.split()]
+print('Mean :', get_mean(user_list))
+print('Median :', get_median(user_list))
+print('Mode :', *get_mode(user_list))
