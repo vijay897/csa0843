@@ -1,0 +1,19 @@
+a=int(input("enter the first number:"))
+b=int(input("enter the second number:"))
+choice=int(input("enter the choice: "))
+
+if (choice==1):
+    sum=a+b
+print(sum)
+if (choice==2):
+    sub=a-b
+    print(sub)
+if (choice==3):
+    mul=a*b
+    print(mul)
+if (choice==4):
+    div=a/b
+    print(div)
+if (choice==5):
+    pow=a*a
+    print(pow)
